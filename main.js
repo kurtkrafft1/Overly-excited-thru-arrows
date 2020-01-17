@@ -6,7 +6,7 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-function addExcitement (theWordArray, char) {
+const addExcitement = (theWordArray, char, num)=> {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = ""
@@ -14,7 +14,7 @@ let j = 1
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
         if (j%3===0){
-            buildMeUp+=sentence[i] +  ` ${char} `;
+            buildMeUp+=sentence[i]+ char.repeat(num)  +' ' ;
         }else {
             buildMeUp+= sentence[i] + " ";}
         // Print buildMeUp to the console
@@ -26,4 +26,4 @@ let j = 1
 }
 
 // Invoke the function and pass in the array
-addExcitement(sentence, '&');
+addExcitement(sentence, '&', 6);
